@@ -17,9 +17,12 @@ const webpackConfigDev = {
             template: path.join(__dirname, '../src/index.html'),
         }),
         new OpenBrowserPlugin({
-            url: `http://localhost:${PORT}/#/`,
+            url: `http://localhost:${PORT}`,
         }),
     ],
     devtool: 'eval-source-map',
+    devServer: {
+        historyApiFallback: true,
+    }
 };
 module.exports = merge(webpackConfigBase, webpackConfigDev);

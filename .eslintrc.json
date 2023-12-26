@@ -14,5 +14,15 @@
         "indent": ["error", 4],
         "react/jsx-indent": ["error", 4],
         "import/no-extraneous-dependencies": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "alias": {
+                "map": [
+                    "pages","./src/pages"
+                ],
+                "extensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".d.ts"]
+            }
+        }
     }
 }
